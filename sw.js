@@ -1,0 +1,17 @@
+self.addEventListener("install", () => {
+    self.skipWaiting();
+});
+
+self.addEventListener("activate", () => {
+    clients.claim();
+});
+
+self.addEventListener("message", (event) => {
+    const { titulo, corpo } = event.data;
+
+    self.registration.showNotification(titulo, {
+        body: corpo,
+        silent: true,
+        icon: "./assets/furina.png"
+    });
+});

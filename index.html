@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Alt1 API -->
+    <script src="https://alt1cdn.s3.amazonaws.com/alt1.js"></script>
+    <script>
+        if (window.alt1) {
+            alt1.identifyApp({
+                appName: "Cuntymetro",
+                description: "Cronômetros personalizáveis para RuneScape",
+                author: "renxlr",
+                version: "1.0"
+            });
+        }
+    </script>
+
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="icon" href="./assets/furina.png" type="image/png" />
+    <title>Cuntymetro</title>
+</head>
+
+<body>
+    <!-- Botão adicionar -->
+    <div class="add">
+        <button id="addCronometro">
+            <img src="assets/plus.svg" alt="Adicionar">
+        </button>
+    </div>
+
+    <script type="module" src="./script.js"></script>
+</body>
+</html>

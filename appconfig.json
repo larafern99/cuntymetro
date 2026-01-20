@@ -1,0 +1,13 @@
+{
+  "appName": "Cuntymetro",
+  "description": "Cronômetros personalizáveis para RuneScape",
+  "appUrl": "./index.html",
+  "configUrl": "./appconfig.json",
+  "iconUrl": "./assets/furina.png",
+  "defaultWidth": 360,
+  "defaultHeight": 480,
+  "minWidth": 280,
+  "minHeight": 300,
+  "requestHandlers": [],
+  "permissions": []
+}

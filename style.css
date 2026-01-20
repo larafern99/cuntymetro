@@ -1,0 +1,125 @@
+:root {
+    --cor-background: #242423;
+    --cor-containers: #ff3463;
+    --cor-botoes: #e9e9e1;
+    --cor-drag: rgba(0, 0, 0, 0.3);
+}
+
+/* ===== Layout geral ===== */
+body {
+    margin: 0;
+    padding: 6px;
+    background: var(--cor-background);
+    font-family: Arial, sans-serif;
+    color: white;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+
+    max-width: 360px;
+    box-sizing: border-box;
+}
+
+/* ===== Cronômetro ===== */
+.cronometro {
+    background: var(--cor-containers);
+    border-radius: 10px;
+    padding: 4px 6px 6px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+
+    position: relative;
+    user-select: none;
+}
+
+/* ===== Barra de drag ===== */
+.drag-handle {
+    width: 100%;
+    height: 6px;
+    background: var(--cor-drag);
+    border-radius: 6px 6px 0 0;
+    cursor: grab;
+}
+
+.drag-handle:active {
+    cursor: grabbing;
+}
+
+/* ===== Título ===== */
+.cronometro h1 {
+    font-size: 11px;
+    margin: 0;
+    font-weight: 600;
+    outline: none;
+}
+
+/* ===== Timer ===== */
+.cronometro p {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+    outline: none;
+}
+
+/* ===== Ações ===== */
+.acoes {
+    display: flex;
+    gap: 4px;
+}
+
+/* ===== Botões ===== */
+button {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    border: 1.5px solid rgb(30, 30, 30);
+    background: var(--cor-botoes);
+    padding: 0;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button img {
+    width: 14px;
+    height: 14px;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+/* ===== Remover ===== */
+.remover {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+
+    width: 16px;
+    height: 16px;
+    font-size: 11px;
+    border-radius: 50%;
+    border: none;
+
+    background: rgba(0, 0, 0, 0.35);
+    color: white;
+}
+
+/* ===== Botão adicionar ===== */
+.add {
+    grid-column: span 3;
+    display: flex;
+    justify-content: center;
+    margin-top: 4px;
+}
+
+.add button {
+    width: 26px;
+    height: 26px;
+}
